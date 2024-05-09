@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uploader using express.js by Im-Dims">
+    <title>Website Uploader</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #007BFF;
+            text-align: center;
+        }
+
+        /* Animated and Colorful Text */
+        .animated-text {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            background: linear-gradient(45deg, #FF5F6D, #FFC371, #FF5F6D);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 2s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        form {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="file"] {
+            margin-bottom: 16px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        /* Credit Section */
+        .credit {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-text">Website Simpel Uploader</div>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Select File:</label>
+        <input type="file" name="file" id="file">
+        <button onclick="uploadSingleFile()">Upload</button>
+    </form>
+
+    <h2>Multi Upload by Im-Dims</h2>
+    <form action="/multi-upload" method="POST" enctype="multipart/form-data">
+        <label for="files">Pilih gambar:</label>
+        <input type="file" name="files" id="files" multiple>
+        <button onclick="uploadMultipleFiles()">Upload</button>
+    </form>
+
+    <div class="credit">Designed by Im-Dims &ndash; &copy; 2023</div>
+
+    <script>
+        function uploadSingleFile() {
+            alert("Tunggu Sebentar, Sedang mengupload single file...");
+            // Add your single file upload logic here
+        }
+
+        function uploadMultipleFiles() {
+            alert("Tunggu sebentar, Sedang mengupload multiple files...");
+            // Add your multiple files upload logic here
+        }
+    </script>
+</body>
+
+</html>
